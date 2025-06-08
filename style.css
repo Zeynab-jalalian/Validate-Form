@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1100ff;
+}
+.container{
+    position: relative;
+    max-width: 350px;
+    width: 100%;
+    padding: 25px;
+    border-radius: 10px;
+    background: #fff;
+}
+.container header{
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+.container form{
+    margin-top: 30px;
+}
+.field{
+    margin-bottom: 20px;
+}
+.container form .input-field{
+    position: relative;
+    height: 55px;
+    width: 100%;
+}
+.input-field .show-hide{
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #919191;
+    cursor: pointer;
+    padding: 3px;
+}
+.input-field input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    border: 1px solid #1d1d1d;
+    border-radius: 8px;
+    padding: 0 15px;
+}
+.field .error{
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    color: red;
+    font-size: 13px;
+    display: none;
+}
+.field .error .error-icon{
+    margin-right: 5px;
+    font-size: 15px;
+}
+.pass-field .error{
+ align-items: flex-start;
+}
+.pass-field .error-icon{
+    margin-top: 5px;
+}
+.button{
+    margin: 25px 0 5px;
+}
+.button input{
+    background: #5252da;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.button input:hover{
+    background: #2727f1;
+}
