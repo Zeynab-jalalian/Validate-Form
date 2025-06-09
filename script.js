@@ -7,15 +7,7 @@ const form = document.querySelector("form"),
     pass2Input = pass2Field.querySelector(".pass2");
 
 
-//email validation
-function checkEmail() {
-    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-    if (!emailInput.value.match(emailPattern)) {
-        return emailField.classList.add("invalid")
-    }
-    return emailField.classList.remove("invalid");
-}
-//submit form
+    //submit form
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     checkEmail();
@@ -29,6 +21,14 @@ form.addEventListener("submit", (e) => {
       location.href=form.getAttribute("action");
     }
 })
+//email validation
+function checkEmail() {
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if (!emailInput.value.match(emailPattern)) {
+        return emailField.classList.add("invalid")
+    }
+    return emailField.classList.remove("invalid");
+}
 //show and hide Password
 const eyeIcons = document.querySelectorAll(".show-hide");
 eyeIcons.forEach(eyeIcon => {
