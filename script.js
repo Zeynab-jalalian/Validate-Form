@@ -24,6 +24,10 @@ form.addEventListener("submit", (e) => {
     emailInput.addEventListener("keyup", checkEmail);
     passInput.addEventListener("keyup", pass);
     pass2Input.addEventListener("keyup", confirmPass);
+
+    if (!emailField.classList.contains("invalid") && !passField.classList.contains("invalid") && !pass2Field.classList.contains("invalid")){
+      location.href=form.getAttribute("action");
+    }
 })
 //show and hide Password
 const eyeIcons = document.querySelectorAll(".show-hide");
@@ -48,7 +52,7 @@ function pass() {
 }
 //Confirm Password validation
 function confirmPass() {
-    if (passInput.value !== pass2Input.value || pass2Input.value==="") {
+    if (passInput.value !== pass2Input.value || pass2Input.value === "") {
         return pass2Field.classList.add("invalid");
     }
     return pass2Field.classList.remove("invalid");
