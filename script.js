@@ -4,7 +4,7 @@ const form = document.querySelector("form"),
     passField = form.querySelector(".pass-field"),
     passInput = passField.querySelector(".pass"),
     pass2Field = form.querySelector(".pass2-field"),
-    pass2Input = passField.querySelector(".pass2");
+    pass2Input = pass2Field.querySelector(".pass2");
 
 
 //email validation
@@ -20,8 +20,10 @@ form.addEventListener("submit", (e) => {
     e.preventDefault();
     checkEmail();
     pass();
+    confirmPass();
     emailInput.addEventListener("keyup", checkEmail);
     passInput.addEventListener("keyup", pass);
+    pass2Input.addEventListener("keyup", confirmPass);
 })
 //show and hide Password
 const eyeIcons = document.querySelectorAll(".show-hide");
@@ -44,3 +46,10 @@ function pass() {
     }
     return passField.classList.remove("invalid");
 }
+//Confirm Password validation
+function confirmPass() {
+    if (passInput.value !== pass2Input.value || pass2Input.value==="") {
+        return pass2Field.classList.add("invalid");
+    }
+    return pass2Field.classList.remove("invalid");
+} 
